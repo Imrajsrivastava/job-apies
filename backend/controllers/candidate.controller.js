@@ -25,16 +25,12 @@ export const applyJob = async (req, res) => {
     candidate: candidate._id,
   });
 
-  await sendEmail(
-    candidate.email,
-    "Job Application Submitted",
-    `You applied to ${job.title}`
-  );
-  await sendEmail(
-    job.postedBy.email,
-    "New Applicant",
-    `${candidate.name} applied to your job.`
-  );
+  // await sendEmail(candidate.email, "Job Application Submitted", `You applied`);
+  // await sendEmail(
+  //   job.postedBy.email,
+  //   "New Applicant",
+  //   `${candidate.name} applied to your job.`
+  // );
 
   res.json({ message: "Applied successfully" });
 };
