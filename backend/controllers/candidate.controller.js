@@ -3,7 +3,7 @@ import Application from "../models/application.model.js";
 import { sendEmail } from "../utils/sendEmail.js";
 
 export const listJobs = async (req, res) => {
-  const jobs = await Job.find().populate("postedBy", "name email");
+  const jobs = await Job.find().populate("postedBy", "email");
   res.json(jobs);
 };
 

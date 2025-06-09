@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5005;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api", authRouter);
+app.use("/api/auth", authRouter);
 app.use("/api/candidate", condidateRouter);
 app.use("/api/recruiter", recruiterRouter);
 
